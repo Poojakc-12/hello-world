@@ -1,0 +1,28 @@
+// Implement strcat() function in C
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+char* Im_strcat(char* dest, const char* source);
+// Function to implement `strcat()` function in C
+char* Im_strcat(char* dest, const char* source)
+{
+    int i, j;
+    for (i = 0; dest[i] != '\0'; i++);     // `i` now point to terminating null character in the destination
+    for (j = 0; source[j] != '\0'; j++) 
+		{
+          dest[i + j] = source[j];
+        }
+    dest[i + j] = '\0';
+    return dest;
+}
+ 
+int main()
+{
+    char* str = (char*)malloc(sizeof(char));
+ 
+    Im_strcat(str, "Hello");
+    Im_strcat(str, "World");
+    printf("%s",str);
+	return 0;
+}
