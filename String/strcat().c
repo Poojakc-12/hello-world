@@ -24,7 +24,7 @@ int main()
     printf("%s",str);
 	return 0;
 }
-/*without using strcat 
+/*without using strcat() 
 #include <stdio.h>
 #include <string.h>
 
